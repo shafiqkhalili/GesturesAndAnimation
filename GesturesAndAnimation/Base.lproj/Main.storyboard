@@ -35,16 +35,24 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Huk-4S-ooI" appends="YES" id="f2M-4W-Er8"/>
+                            <outletCollection property="gestureRecognizers" destination="MWP-ew-iy1" appends="YES" id="v4q-bP-X7b"/>
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="doubleTapGestureRecognize" destination="MWP-ew-iy1" id="FeJ-qA-MnL"/>
                         <outlet property="gestureNameLabel" destination="jO2-5L-b3N" id="O2m-qO-Viz"/>
+                        <outlet property="singleTapGestureRecognize" destination="Huk-4S-ooI" id="cCa-Gm-iSl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="Huk-4S-ooI">
+                <tapGestureRecognizer id="Huk-4S-ooI" userLabel="singleTapGestureRecognizer">
                     <connections>
                         <action selector="singleTap:" destination="BYZ-38-t0r" id="2rS-7f-MAk"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="MWP-ew-iy1" userLabel="doubleTapGestureRecognizer">
+                    <connections>
+                        <action selector="doubleTap:" destination="BYZ-38-t0r" id="jan-ah-7pm"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
