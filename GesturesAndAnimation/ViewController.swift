@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        //To waite if double tap is clicked
+        //To waite if double tap is clicked or doubletap failed
         singleTapGestureRecognize.require(toFail: doubleTapGestureRecognize)
     }
     
