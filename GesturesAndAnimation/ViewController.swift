@@ -18,7 +18,13 @@ class ViewController: UIViewController {
 
     @IBAction func singleTap(_ sender: UITapGestureRecognizer) {
         gestureNameLabel.text = "Tap"
+        //{} is a closure, which is like a function as argument
+        //in this case it tells what to be animated
+        UIView.animate(withDuration: 1.0, animations: {self.gestureNameLabel.alpha = 1.0}, completion: makeLabelInvisible(finished:))
     }
     
+    func makeLabelInvisible(finished: Bool) {
+        UIView.animate(withDuration: 1.0, animations: {self.gestureNameLabel.alpha =  0.0})
+    }
 }
 
